@@ -129,3 +129,15 @@ $(document).ready(controller.init);
         document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
       }
     } 
+
+    var registerBtn = document.getElementById("registerBtn");
+    var homeBooking = document.getElementById("homeBooking");
+    var bookingBtnClose = document.getElementById("bookingBtnClose");
+    registerBtn.addEventListener("click",()=>{
+        homeBooking.style.display="block";
+        registerBtn.style.display="none";
+    });
+    bookingBtnClose.addEventListener("click",()=>{
+        homeBooking.style.display="none";
+        registerBtn.style.display="block";
+    });
