@@ -39,11 +39,52 @@
   <link rel="stylesheet" href="./assets/css/homePricing/homePricing.css">
   <link rel="stylesheet" href="./assets/css/gallery.css">
   <link rel="stylesheet" href="./assets/css/Loginpage/loginpage.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/jquery.convform.css">
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- chatbots -->
+
+  
+  <script type="text/javascript" src="./assets/js/jquery.convform.js"></script>
 
 </head>
 
 <body>
+
+  <div class="chat_box">
+    <div class="my-conv-form-wrapper">
+      <form action="" method="GET" >
+  
+        <select data-conv-question="Hello! How can I help you" name="category">
+          <option value="WebDevelopment">Website Development ?</option>
+          <option value="DigitalMarketing">Digital Marketing ?</option>
+        </select>
+  
+        <div data-conv-fork="category">
+          <div data-conv-case="WebDevelopment">
+            <input type="text" name="domainName" data-conv-question="Please, tell me your domain name">    
+          </div>
+          <div data-conv-case="DigitalMarketing" data-conv-fork="first-question2">
+            <input type="text" name="companyName" data-conv-question="Please, enter your company name"> 
+          </div>
+        </div>
+  
+        <input type="text" name="name" data-conv-question="Please, Enter your name">
+  
+        <input type="text" data-conv-question="Hi {name}, <br> It's a pleasure to meet you." data-no-answer="true">
+  
+        <input data-conv-question="Enter your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+  
+        <select data-conv-question="Please Conform">
+          <option value="Yes">Conform</option>
+        </select>
+      </form>
+    </div>
+  </div>
+  <div class="chat_icon">
+    <i class="fa-solid fa-robot"></i>
+  </div>
+
   <div class="registerBtnContainer">
     <button id="registerBtn" class="registerBtn"><i class="fa-regular fa-paper-plane"></i></button>
   </div>
@@ -353,13 +394,22 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="quote-wrapper">
-                      <p>One of the best salon experiences I've ever had! From the dry consultation to the aroma therapy head massage, Faith has a way of making you feel and look like a million bucks! She's truly one of the most unique hair stylists I've ever met. I recommend her to all my friends and family.</p>
+                      <p>One of the best salon experiences I've ever had! From the dry consultation to the aroma therapy
+                        head massage, Faith has a way of making you feel and look like a million bucks! She's truly one
+                        of the most unique hair stylists I've ever met. I recommend her to all my friends and family.
+                      </p>
                       <h3>Shannon</h3>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="quote-wrapper">
-                      <p>WOW!! Great experience! At Salon Faith they not only do a great job when it comes to cutting, coloring or styling you hair but they more importantly educate about your hair. It's great to have an expert such as Salon Faith teach you how to achieve the "I just walked out of a salon" look everyday. I cannot count how many times in the past I only loved my hair the day of the visit, and now my hair feels like it visits everyday. There's a saying, "If you are having a great hair day, you are having a great day!", at Salon Faith they set up for success everyday. Thank you for your expertise!!!</p>
+                      <p>WOW!! Great experience! At Salon Faith they not only do a great job when it comes to cutting,
+                        coloring or styling you hair but they more importantly educate about your hair. It's great to
+                        have an expert such as Salon Faith teach you how to achieve the "I just walked out of a salon"
+                        look everyday. I cannot count how many times in the past I only loved my hair the day of the
+                        visit, and now my hair feels like it visits everyday. There's a saying, "If you are having a
+                        great hair day, you are having a great day!", at Salon Faith they set up for success everyday.
+                        Thank you for your expertise!!!</p>
                       <h2>Carol Tousley</h2>
                     </div>
                   </div>
@@ -1190,8 +1240,10 @@
         </div>
       </div>
 
-      <form action="https://formsubmit.co/vedantjannu827@gmail.com" method="POST" role="form" class="php-email-form mt-4">
+      <form action="https://formsubmit.co/vedantjannu827@gmail.com" method="POST" role="form"
+        class="php-email-form mt-4">
         <input type="hidden" name="_subject" value="New Contact from UpGrace!!">
+        <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://upgrace.netlify.app/thanks.html">
         <div class="row">
           <div class="col-md-6 form-group">
