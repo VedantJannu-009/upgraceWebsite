@@ -2,11 +2,12 @@
   @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 }
 .homeBooking .container {
-  background: #313134;
+  background: #141415;
   width: 500px;
   padding: 25px;
   margin: 25px auto 0;
-  box-shadow: 7px 7px 18px #141415, -7px -7px 10px #252526;
+  box-shadow: 7px 7px 18px #141415;
+  border-radius: 0.3rem;
 }
 .homeBooking .container h2 {
   box-shadow: 5px 5px 10px #141415, -5px -5px 10px #252526;
@@ -36,7 +37,7 @@
   position: relative;
 }
 .homeBooking .input-box input {
-  background: #313134;
+  background: #141415;
   box-shadow: 7px 7px 18px #141415, -7px -7px 10px #252526;
 }
 .homeBooking .input-box:last-child {
@@ -63,6 +64,19 @@
   letter-spacing: 1px;
   border-radius: 5px;
   color: #fff;
+}
+.homeBooking input[type=date]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+  filter: invert(0.8);
+}
+.homeBooking input[type=checkbox] {
+  cursor: pointer;
+}
+.homeBooking input[type=date]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
 }
 .homeBooking .dob {
   outline: none;

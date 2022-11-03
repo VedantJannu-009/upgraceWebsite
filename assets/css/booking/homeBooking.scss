@@ -2,12 +2,12 @@
     @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 .container {
-    background: #313134;
+    background: #141415;
     width: 500px;
     padding: 25px;
     margin: 25px auto 0;
-    box-shadow: 7px 7px 18px #141415,
-        -7px -7px 10px #252526;
+    box-shadow: 7px 7px 18px #141415;
+    border-radius: 0.3rem;
 }
 
 .container h2 {
@@ -43,7 +43,7 @@ h4 {
 }
 
 .input-box input {
-    background: #313134;
+    background: #141415;
     box-shadow: 7px 7px 18px #141415,
         -7px -7px 10px #252526;
 }
@@ -75,7 +75,19 @@ h4 {
     border-radius: 5px;
     color: #fff;
 }
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 0.6;
+    filter: invert(0.8);
+  }
+  input[type="checkbox"]{
+    cursor: pointer;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1
+  }
 .dob {
     outline: none;
     border: 2px solid #39f077;
